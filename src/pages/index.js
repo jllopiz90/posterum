@@ -1,5 +1,8 @@
 import React from "react"
 import { Helmet } from "react-helmet"
+import '../css/global.css';
+
+import Layout from '../components/Layout/Layout';
 
 // markup
 const IndexPage = () => {
@@ -8,9 +11,9 @@ const IndexPage = () => {
       <Helmet>
         <title>Posterum</title>
       </Helmet>
-      <main>
-        <div>Hello world!</div>
-      </main>
+      <Layout>
+        <h1>Hello World!</h1>
+      </Layout>
     </>
   )
 }

@@ -1,0 +1,38 @@
+:root {
+  --main-bg-color: #000;
+  --main-text-color: #fff;
+  --button-bright: 120%;
+  --sky-color: #61dafb;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--main-bg-color);
+}
+
+h1 {
+  color: var(--sky-color);
+}
+
+p {
+  color: var(--main-text-color);
+}
+
+.button {
+    width: 50px;
+    padding: 5px 10px;
+    border: 1px solid #61dafb;
+    background-color: transparent;
+  }
+  
+  
+  .grow { transition: all .2s ease-in-out; }
+  .grow:hover { 
+    transform: scale(1.1);
+    filter: brightness(var(--button-bright));
+  }

@@ -1,0 +1,14 @@
+header {
+  background-color: var(--main-bg-color);
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  padding: 5px 30px;
+  -webkit-box-shadow: 0 5px 3px -5px #61dafb;
+  -moz-box-shadow: 0 5px 3px -5px #61dafb;
+  box-shadow: 0 5px 3px -5px #61dafb;
+}
