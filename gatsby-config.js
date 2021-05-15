@@ -3,12 +3,13 @@ module.exports = {
     title: "posterum",
   },
   plugins: [
+    "gatsby-plugin-react-helmet",
     "gatsby-plugin-gatsby-cloud",
     "gatsby-plugin-image",
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        icon: "src/images/icon.png",
+        icon: "src/images/coding.png",
       },
     },
     "gatsby-plugin-sharp",
