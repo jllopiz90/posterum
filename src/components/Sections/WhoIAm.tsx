@@ -6,8 +6,8 @@ import "./whoiam.css";
 
 const WhoIAm = () => (
   <>
-    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-      <a href="https://github.com/jllopiz90" target="_new">
+    <div className="fadeLeftContainer">
+      <a href="https://github.com/jllopiz90" target="_new" >
         <img src={MeCoding} width="150px" alt="avatar" className="grow" />
       </a>
     </div>
