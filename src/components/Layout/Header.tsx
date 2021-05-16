@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import { SunIcon, MoonIcon } from '../icons';
+import { SunIcon, MoonIcon } from "../icons";
 import "./header.css";
 //@ts-ignore
 import Octocat from "../../images/Octocat-removebg-preview.png";
@@ -27,22 +27,25 @@ const toogleColors = (currentMode: boolean) => {
 const Header = () => {
   const [nightMode, setMode] = useState(true);
   return (
-    <header>
-      <span>
-        <a href="https://github.com/jllopiz90" target="_new">
-          <img src={Octocat} alt="github" width="40px" className="grow" />
-        </a>
-      </span>
-      <button
-        onClick={() => {
-          toogleColors(nightMode);
-          setMode(!nightMode);
-        }}
-        className="button grow"
-      >
-        {nightMode ? <SunIcon /> : <MoonIcon />}
-      </button>
-    </header>
+    <>
+      <header>
+        <span>
+          <a href="https://github.com/jllopiz90" target="_new">
+            <img src={Octocat} alt="github" width="40px" className="grow" />
+          </a>
+        </span>
+        <button
+          onClick={() => {
+            toogleColors(nightMode);
+            setMode(!nightMode);
+          }}
+          className="button grow"
+        >
+          {nightMode ? <SunIcon /> : <MoonIcon />}
+        </button>
+      </header>
+      <div className="border-slide" />
+    </>
   );
 };
 
