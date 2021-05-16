@@ -12,17 +12,21 @@ header {
 
 @keyframes Slide-border {
   0% {
-    width: 0%;
+    left: -100%;
   }
 
   100% {
-    width: 100%;
+    left: 100%;
   }
 }
 
-.border-slide {
+.border-slide-start {
+  position: absolute;
+  width: 100%;
   animation-name: Slide-border;
   animation-duration: 2s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
   background: none repeat scroll 0 0 var(--sky-color);
   height: 1px;
 }

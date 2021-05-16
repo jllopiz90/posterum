@@ -44,7 +44,9 @@ const Header = () => {
           {nightMode ? <SunIcon /> : <MoonIcon />}
         </button>
       </header>
-      <div className="border-slide" />
+      <div style={{ width: "100%", position: 'relative' }}>
+        <div className="border-slide-start" />
+      </div>
     </>
   );
 };
