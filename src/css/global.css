@@ -36,3 +36,8 @@ p {
     transform: scale(1.1);
     filter: brightness(var(--button-bright));
   }
+
+  .three-columns-grid {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+  }

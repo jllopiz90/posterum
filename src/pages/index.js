@@ -2,6 +2,8 @@ import React from "react"
 import { Helmet } from "react-helmet"
 import '../css/global.css';
 
+import Title from '../components/Title/Title';
+
 import Layout from '../components/Layout/Layout';
 
 // markup
@@ -12,7 +14,9 @@ const IndexPage = () => {
         <title>Posterum</title>
       </Helmet>
       <Layout>
-        <h1>Hello World!</h1>
+        <div className="three-columns-grid">
+          <Title text="Jesus Llopiz Portfolio" />
+        </div>
       </Layout>
     </>
   )
