@@ -2,7 +2,7 @@ import React from "react"
 import { Helmet } from "react-helmet"
 import '../css/global.css';
 
-import Title from '../components/Title/Title';
+import Title from '../components/Sections/Title';
 
 import Layout from '../components/Layout/Layout';
 
