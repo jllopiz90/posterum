@@ -2,9 +2,9 @@ import React from "react"
 import { Helmet } from "react-helmet"
 import '../css/global.css';
 
-import Title from '../components/Sections/Title';
-
 import Layout from '../components/Layout/Layout';
+import Title from '../components/Sections/Title';
+import WhoIAm from "../components/Sections/WhoIAm";
 
 // markup
 const IndexPage = () => {
@@ -16,6 +16,7 @@ const IndexPage = () => {
       <Layout>
         <div className="three-columns-grid">
           <Title text="Jesus Llopiz Portfolio" />
+          <WhoIAm />
         </div>
       </Layout>
     </>

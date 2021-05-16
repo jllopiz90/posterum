@@ -19,7 +19,8 @@ h1 {
   color: var(--sky-color);
 }
 
-p {
+p,
+li {
   color: var(--main-text-color);
 }
 
