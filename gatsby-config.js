@@ -4,7 +4,6 @@ module.exports = {
   },
   plugins: [
     "gatsby-plugin-react-helmet",
-    "gatsby-plugin-breakpoints",
     "gatsby-plugin-gatsby-cloud",
     "gatsby-plugin-image",
     {
