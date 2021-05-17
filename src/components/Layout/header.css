@@ -12,11 +12,23 @@ header {
 
 @keyframes Slide-border {
   0% {
-    left: -100%;
+    left: 0%;
+    width: 1%;
+  }
+
+  25% {
+    left: 0%;
+    width: 100%;
+  }
+
+  50% {
+    left: 50%;
+    width: 50%;
   }
 
   100% {
     left: 100%;
+    width: 0%;
   }
 }
 
@@ -24,8 +36,8 @@ header {
   position: absolute;
   width: 100%;
   animation-name: Slide-border;
-  animation-duration: 2s;
-  animation-timing-function: ease-out;
+  animation-duration: 3s;
+  animation-timing-function: linear;
   animation-iteration-count: infinite;
   background: none repeat scroll 0 0 var(--sky-color);
   height: 1px;

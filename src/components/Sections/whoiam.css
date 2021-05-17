@@ -33,33 +33,37 @@ ul li::before {
 }
 
 @keyframes fadeInLeftMobile {
-    0% {
-      position: absolute;
-      left: -20%;
-      opacity: 0;
-    }
-  
-    100% {
-      position: absolute;
-      left: 4%;
-      opacity: 1;
-    }
+  0% {
+    position: absolute;
+    left: -20%;
+    opacity: 0;
   }
 
-.fadeLeftIn {
-    animation-name: fadeInLeft;
-    animation-duration: 1s;
-    animation-timing-function: ease;
+  100% {
+    position: absolute;
+    left: 4%;
+    opacity: 1;
+  }
 }
 
-.fadeLeftInMobile {
-    animation-name: fadeInLeftMobile;
-    animation-duration: 1s;
-    animation-timing-function: ease;
-}
-
-.full-row {
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .full-row-mobile {
     grid-column: span 3;
     display: flex;
     justify-content: center;
+  }
+}
+
+@media only screen and (min-device-width: 420px) {
+  .fadeLeftIn {
+    animation-name: fadeInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+  }
+  
+  .fadeLeftInMobile {
+    animation-name: fadeInLeftMobile;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+  }
 }

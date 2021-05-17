@@ -1,11 +1,13 @@
-.full-row {
-    grid-column: span 3;
-    display: flex;
-    justify-content: flex-start;
-    padding-top: 20px;
-    padding-left: 20px;
-}
-
 .title {
     transition: color 1.5s ease .2s;
 }
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    .full-row {
+        grid-column: span 3;
+        display: flex;
+        justify-content: flex-start;
+        padding-top: 20px;
+        padding-left: 20px;
+    }
+  }
