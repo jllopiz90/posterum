@@ -1,9 +1,19 @@
 import React from "react";
 import { useBreakpoint } from "gatsby-plugin-breakpoints";
+import { StaticImage } from "gatsby-plugin-image";
 
-//@ts-ignore
-import MeCoding from "../../images/coding.png";
 import "./whoiam.css";
+
+const CodingImg = () => (
+  <StaticImage
+    src="../../images/coding.png"
+    width={150}
+    height={150}
+    alt="avatar"
+    className="grow"
+    placeholder="blurred"
+  />
+)
 
 const WhoIAm = () => {
   const breakpoints = useBreakpoint();
@@ -11,11 +21,8 @@ const WhoIAm = () => {
   const mobileSection = () => (
     <>
       <div className="full-row">
-        <a
-          href="https://github.com/jllopiz90"
-          target="_new"
-        >
-          <img src={MeCoding} width="120px" alt="avatar" className="grow" />
+        <a href="https://github.com/jllopiz90" target="_new">
+        <CodingImg />
         </a>
       </div>
       <div className="full-row">
@@ -51,7 +58,7 @@ const WhoIAm = () => {
           target="_new"
           className={breakpoints.sm ? "fadeLeftInMobile" : "fadeLeftIn"}
         >
-          <img src={MeCoding} width="150px" alt="avatar" className="grow" />
+          <CodingImg />
         </a>
       </div>
       <div style={{ paddingLeft: "5%" }}>

@@ -1,9 +1,19 @@
 import React, { useState } from "react";
+import { StaticImage } from "gatsby-plugin-image"
 
 import { SunIcon, MoonIcon } from "../icons";
 import "./header.css";
-//@ts-ignore
-import Octocat from "../../images/Octocat-removebg-preview.png";
+
+const OctocatImage = () => (
+  <StaticImage 
+    src="../../images/Octocat-removebg-preview.png"
+    alt="Github Profile"
+    placeholder="blurred"
+    className="grow"
+    width={40}
+    height={40}
+  />
+)
 
 const toogleColors = (currentMode: boolean) => {
   document.documentElement.style.setProperty(
@@ -31,7 +41,7 @@ const Header = () => {
       <header>
         <span>
           <a href="https://github.com/jllopiz90" target="_new">
-            <img src={Octocat} alt="github" width="40px" className="grow" />
+            <OctocatImage />
           </a>
         </span>
         <button
