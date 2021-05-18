@@ -32,7 +32,7 @@ header {
   }
 }
 
-.border-slide-start {
+.borderSlide {
   position: absolute;
   width: 100%;
   animation-name: Slide-border;

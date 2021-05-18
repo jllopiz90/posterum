@@ -1,9 +1,9 @@
 import React from "react"
 import { Helmet } from "react-helmet"
-import '../css/global.css';
+import '../css/global.module.css';
 
 import Layout from '../components/Layout/Layout';
-import Title from '../components/Sections/Title';
+import Title from '../components/Sections/Title/Title';
 import WhoIAm from "../components/Sections/WhoIAm";
 
 // markup

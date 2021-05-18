@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { StaticImage } from "gatsby-plugin-image"
 
-import { SunIcon, MoonIcon } from "../icons";
-import "./header.css";
+import { SunIcon, MoonIcon } from "../../icons";
+import * as headerStyles from "./header.module.css";
 
 const OctocatImage = () => (
   <StaticImage 
-    src="../../images/Octocat-removebg-preview.png"
+    src="../../../images/Octocat-removebg-preview.png"
     alt="Github Profile"
     placeholder="blurred"
     className="grow"
@@ -55,7 +55,7 @@ const Header = () => {
         </button>
       </header>
       <div style={{ width: "100%", position: 'relative' }}>
-        <div className="border-slide-start" />
+        <div className={headerStyles.borderSlide} />
       </div>
     </>
   );

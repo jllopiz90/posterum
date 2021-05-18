@@ -1,7 +1,7 @@
 import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 
-import "./whoiam.css";
+import * as whoIamStyles from "./whoiam.module.css";
 
 const CodingImg = () => (
   <StaticImage
