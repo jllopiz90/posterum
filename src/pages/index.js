@@ -42,7 +42,6 @@ function IndexPage({ data }) {
             <a
               href="https://github.com/jllopiz90"
               target="_new"
-              className={`${styles.fadeInLeftMobile}`}
             >
               <CodingImg />
             </a>

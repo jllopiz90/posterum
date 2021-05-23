@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import "./scroll-animations.css";
+import { useState } from "react";
+import * as styles from "./scroll-animations.module.css";
 
 const SSR_MESSAGE = "Sal was not initialised! Probably it is used in SSR.";
 
@@ -18,8 +18,8 @@ export const useIntersectionObserver = () => {
     root: null,
     rootMargin: "0% 50%",
     threshold: 0.5,
-    animateClassName: "scroll-animate",
-    disabledClassName: "scroll-disabled",
+    animateClassName: styles.scrollAnimate,//"scroll-animate",
+    disabledClassName: styles.scrollDisabled,//"scroll-disabled",
     enterEventName: "scroll:in",
     exitEventName: "scroll:out",
     selector: "[data-scroll]",

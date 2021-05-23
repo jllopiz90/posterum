@@ -41,48 +41,6 @@ ul li::before {
   position: relative;
 }
 
-@keyframes fadeInLeft {
-  0% {
-    position: absolute;
-    left: -50%;
-    opacity: 0;
-  }
-
-  100% {
-    position: absolute;
-    left: 24%;
-    opacity: 1;
-  }
-}
-
-@keyframes fadeInLeftMobile {
-  0% {
-    position: absolute;
-    left: -20%;
-    opacity: 0;
-  }
-
-  100% {
-    position: absolute;
-    left: 4%;
-    opacity: 1;
-  }
-}
-
-@media only screen and (min-device-width: 420px) {
-  .fadeLeftIn {
-    animation-name: fadeInLeft;
-    animation-duration: 1s;
-    animation-timing-function: ease;
-  }
-
-  .fadeLeftInMobile {
-    animation-name: fadeInLeftMobile;
-    animation-duration: 1s;
-    animation-timing-function: ease;
-  }
-}
-
 .description {
   margin-bottom: 100px;
   padding-right: 100px;
@@ -116,7 +74,6 @@ ul li::before {
     justify-content: center;
   }
 
-
   .whatsThisImg {
     margin-top: -80px;
     margin-left: 0;
@@ -124,6 +81,6 @@ ul li::before {
   }
 
   .whatsThisImgContainer {
-      flex-direction: column;
+    flex-direction: column;
   }
 }
