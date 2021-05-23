@@ -1,15 +1,16 @@
 import React from 'react';
+import { IconProps } from "./types";
 
-export const MoonIcon = ({ size = 20 }: { size?: number }) => (
+export const MoonIcon = ({ size = 20, color= "#2763a8" }: IconProps) => (
   <svg
     width={size}
     fill="none"
-    stroke="#2763a8"
+    stroke={color}
     viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
   >
     <path
-      fill="#2763a8"
+      fill={color}
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={2}

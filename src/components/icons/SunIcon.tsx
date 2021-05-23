@@ -1,10 +1,11 @@
 import React from 'react';
+import { IconProps } from './types';
 
-export const SunIcon = ({ size = 20 }: { size?: number }) => (
+export const SunIcon = ({ size = 20, color = "#ece90b" }: IconProps) => (
   <svg
     width={size}
     fill="none"
-    stroke="#ece90b"
+    stroke={color}
     viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
   >
