@@ -1,9 +1,9 @@
 .title {
   transition: color 1.5s ease 0.2s;
-  /* font-size: 72px; */
-  background: -webkit-linear-gradient(#333, #61dafb);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--sky-color);
+  /* background: -webkit-linear-gradient(#333, #61dafb); */
+  /* -webkit-background-clip: text; */
+  /* -webkit-text-fill-color: transparent; */
 }
 
 .fullRow {
@@ -85,6 +85,7 @@ ul li::before {
 
 .description {
   margin-bottom: 100px;
+  padding-right: 100px;
 }
 
 .whatsThis {

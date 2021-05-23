@@ -109,7 +109,7 @@ function IndexPage({ data }) {
             className={`${styles.fullRowMobile} ${styles.twoColumns} ${styles.whatsThisImgContainer}`}
           >
             <div className={styles.whatsThis}>
-              <h1>What's this?</h1>
+              <h1 className={styles.title}>What's this?</h1>
             </div>
             <div
               data-scroll="slide-up"
@@ -120,6 +120,47 @@ function IndexPage({ data }) {
             >
               <GatsbyImage image={image} alt="whats-this-pic" />
             </div>
+          </div>
+          <div></div>
+          <div
+            className={`${styles.fullRowMobile} ${styles.twoColumns} ${styles.description}`}
+          >
+            <ul className="circle">
+              <li>
+                <span role="img" aria-label="Briefcase">
+                  💼
+                </span>{" "}
+                This is mainly an attempt to build a personal portfolio. I have
+                been working in the industry a few more than 5 years now. I
+                worked in the BE with PHP using laravel and using plain PHP,
+                then I shifted to the FE because React and ES6, but everytime I
+                search for a new job I face the same issue, I don't have any
+                code to show because it belongs to the companies, now I decided
+                to change that, a bit late but never to late.
+              </li>
+              <li>
+                <span role="img" aria-label="Notebook">
+                  📓
+                </span>{" "}
+                I also pretend this site to be a bit more than that, a lot of
+                coders I follow recommend to write your own blogs for a lot of
+                reasons mainly to fix the knowledge and have a place where to
+                find help quickly. That's why I want this to be also a site with
+                helpful blogs and examples to help myself and others to build
+                their web applications easier and faster.
+              </li>
+              <li>
+                <span role="img" aria-label="">
+                  🧰
+                </span>{" "}
+                Since I have been a frontend developer the last 3 years and I
+                really enjoy that role, most of the content will be orientated
+                to that environment, this doesn't mean that in the future i
+                can't post something about other technologies that I find
+                interesting. But for now CSS, JS, HTML and especially ReactJS
+                content will be the majority of (if not all) the content.
+              </li>
+            </ul>
           </div>
         </div>
       </Layout>
