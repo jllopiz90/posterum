@@ -389,6 +389,14 @@ body.scroll-disabled [data-scroll|='fade'] {
 	transform: translateX(20%);
 }
 
+[data-scroll='slide-larger-left'] {
+	transform: translateX(60%);
+}
+
+[data-scroll='slide-larger-right'] {
+	transform: translateX(-60%);
+}
+
 [data-scroll='slide-right'] {
 	transform: translateX(-20%);
 }

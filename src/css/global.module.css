@@ -3,6 +3,8 @@
   --main-text-color: #fff;
   --button-bright: 120%;
   --sky-color: #61dafb;
+  --shadow-color: #fff;
+  --hide-opacity: 1;
 }
 
 body {
@@ -25,6 +27,7 @@ p, li {
 
 :global(.button) {
   width: 50px;
+  height: 40px;
   padding: 5px 10px;
   border: 1px solid #61dafb;
   background-color: transparent;
@@ -42,4 +45,23 @@ p, li {
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
   gap: 1rem;
+}
+
+:global(.show-on-mobile) {
+  display: none;  
+}
+
+:global(.circle ul li::before) {
+  content: "\2022"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: var(--sky-color); /* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1em; /* Also needed for space (tweak if needed) */
+  margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 560px) {
+  :global(.show-on-mobile) {
+    display: block;
+  }
 }

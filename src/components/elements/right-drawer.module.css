@@ -1,0 +1,44 @@
+.menu {
+  padding-left: 10px;
+}
+
+.menuItem {
+  margin-bottom: 10px;
+}
+
+li span {
+  margin-left: 10px;
+}
+
+li a {
+  text-decoration: none;
+  color: var(--main-text-color);
+}
+
+.drawer {
+  position: fixed;
+  right: -80px;
+  top: 10px;
+  width: 20rem;
+  min-height: 100%;
+  background-color: var(--main-bg-color);
+  border: 1px solid var(--main-text-color);
+  -webkit-filter: drop-shadow(0.5px 0.5px 0.5px var(--main-text-color));
+  filter: drop-shadow(0.5px 0.5px 0.5px var(--main-text-color));
+}
+
+.shadow {
+  -webkit-filter: drop-shadow(-4px 2.5px 2px var(--shadow-color));
+  filter: drop-shadow(-4px 2.5px 2px var(--shadow-color));
+  /* Similar syntax to box-shadow */
+}
+
+.closeBtnContainer {
+    display: flex;
+    flex-direction: row-reverse;
+    padding-right: 10px;
+}
+
+.closeBtn {
+    background: transparent;
+}

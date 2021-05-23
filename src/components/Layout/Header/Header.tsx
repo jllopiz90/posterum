@@ -1,7 +1,9 @@
-import React, { useState } from "react";
-import { StaticImage } from "gatsby-plugin-image"
+import React, { useState, useEffect } from "react";
+import { StaticImage } from "gatsby-plugin-image";
 
-import { SunIcon, MoonIcon } from "../../icons";
+import MenuMobile from "../../elements/RigthDrawer";
+import OutsideAlerter from "../../../functions/useOutsideElementEvent";
+import { SunIcon, MoonIcon, KeyholeIcon, KeyIcon } from "../../icons";
 import * as headerStyles from "./header.module.css";
 
 const OctocatImage = () => (
@@ -32,10 +34,23 @@ const toogleColors = (currentMode: boolean) => {
     "--sky-color",
     currentMode ? "#276779" : "#61dafb"
   );
+  document.documentElement.style.setProperty(
+    "--shadow-color",
+    currentMode ? "#61dafb" : "#fff"
+  );
 };
 
 const Header = () => {
   const [nightMode, setMode] = useState(true);
+  const [openMenuMobile, setOpenMenuMobile] = useState(false);
+
+  useEffect(() => {
+    document.documentElement.style.setProperty(
+      "--hide-opacity",
+      !openMenuMobile ? '1' : '0',
+    );
+  }, [openMenuMobile])
+
   return (
     <>
       <header>
@@ -44,6 +59,7 @@ const Header = () => {
             <OctocatImage />
           </a>
         </span>
+        <div className={headerStyles.buttonsContainer}>
         <button
           onClick={() => {
             toogleColors(nightMode);
@@ -53,10 +69,23 @@ const Header = () => {
         >
           {nightMode ? <SunIcon /> : <MoonIcon />}
         </button>
+        <button
+          onClick={() => {
+            setOpenMenuMobile(true);
+          }}
+          className="button grow show-on-mobile"
+        >
+          <KeyIcon size={16} color={nightMode ? '#eff31d' : '#d8a12a'}  />
+          <KeyholeIcon size={12} color={nightMode ? '#61dafb' : '#2763a8'} />
+        </button>
+        </div>
       </header>
       <div style={{ width: "100%", position: 'relative' }}>
         <div className={headerStyles.borderSlide} />
       </div>
+      <OutsideAlerter onClick={() => setOpenMenuMobile(false)}>
+        <MenuMobile nightMode={nightMode} open={openMenuMobile} close={() => setOpenMenuMobile(false)} />
+      </OutsideAlerter>
     </>
   );
 };

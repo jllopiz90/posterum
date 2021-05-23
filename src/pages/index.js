@@ -38,7 +38,7 @@ function IndexPage({ data }) {
           <div className={`${styles.twoColumns} ${styles.fullRowMobile}`}>
             <h1 className={styles.title}>Jesus Llopiz portfolio</h1>
           </div>
-          <div className={`${styles.codingImg} ${styles.fullRowMobile}`}>
+          <div className={`${styles.codingImg} ${styles.fullRowMobile} ${styles.hideOnMenu}`}>
             <a
               href="https://github.com/jllopiz90"
               target="_new"
@@ -47,9 +47,9 @@ function IndexPage({ data }) {
             </a>
           </div>
           <div
-            className={`${styles.fullRowMobile} ${styles.twoColumns} ${styles.description}`}
+            className={`${styles.fullRowMobile} ${styles.twoColumns} ${styles.description} circle`}
           >
-            <ul className="circle">
+            <ul>
               <li>
                 <span role="img" aria-label="Family">
                   👨‍👩‍👧
@@ -122,9 +122,9 @@ function IndexPage({ data }) {
           </div>
           <div></div>
           <div
-            className={`${styles.fullRowMobile} ${styles.twoColumns} ${styles.description}`}
+            className={`${styles.fullRowMobile} ${styles.twoColumns} ${styles.description} circle`}
           >
-            <ul className="circle">
+            <ul>
               <li>
                 <span role="img" aria-label="Briefcase">
                   💼
