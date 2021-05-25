@@ -1,4 +1,5 @@
 header {
+  width: 96vw;
   background-color: var(--main-bg-color);
   height: 60px;
   display: flex;

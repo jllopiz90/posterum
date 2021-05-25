@@ -23,6 +23,7 @@ function IndexPage({ data }) {
   const { init } = useIntersectionObserver();
   useEffect(() => {
     init();
+    // eslint-disable-next-line
   }, []);
 
   return (

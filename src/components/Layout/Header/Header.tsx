@@ -7,7 +7,7 @@ import { SunIcon, MoonIcon, KeyholeIcon, KeyIcon } from "../../icons";
 import * as headerStyles from "./header.module.css";
 
 const OctocatImage = () => (
-  <StaticImage 
+  <StaticImage
     src="../../../images/Octocat-removebg-preview.png"
     alt="Github Profile"
     placeholder="blurred"
@@ -15,7 +15,7 @@ const OctocatImage = () => (
     width={40}
     height={40}
   />
-)
+);
 
 const toogleColors = (currentMode: boolean) => {
   document.documentElement.style.setProperty(
@@ -47,9 +47,9 @@ const Header = () => {
   useEffect(() => {
     document.documentElement.style.setProperty(
       "--hide-opacity",
-      !openMenuMobile ? '1' : '0',
+      !openMenuMobile ? "1" : "0"
     );
-  }, [openMenuMobile])
+  }, [openMenuMobile]);
 
   return (
     <>
@@ -60,32 +60,32 @@ const Header = () => {
           </a>
         </span>
         <div className={headerStyles.buttonsContainer}>
-        <button
-          onClick={() => {
-            toogleColors(nightMode);
-            setMode(!nightMode);
-          }}
-          className="button grow"
-        >
-          {nightMode ? <SunIcon /> : <MoonIcon />}
-        </button>
-        <button
-          onClick={() => {
-            setOpenMenuMobile(true);
-          }}
-          className="button grow show-on-mobile"
-        >
-          <KeyIcon size={16} color={nightMode ? '#eff31d' : '#d8a12a'}  />
-          <KeyholeIcon size={12} color={nightMode ? '#61dafb' : '#2763a8'} />
-        </button>
+          <button
+            onClick={() => {
+              toogleColors(nightMode);
+              setMode(!nightMode);
+            }}
+            className="button grow"
+          >
+            {nightMode ? <SunIcon /> : <MoonIcon />}
+          </button>
+          <button
+            onClick={() => {
+              setOpenMenuMobile(true);
+            }}
+            className="button grow show-on-mobile"
+          >
+            <KeyIcon size={16} color={nightMode ? "#eff31d" : "#d8a12a"} />
+            <KeyholeIcon size={12} color={nightMode ? "#61dafb" : "#2763a8"} />
+          </button>
         </div>
       </header>
-      <div style={{ width: "100%", position: 'relative' }}>
+      <div id="line-moving" style={{ width: "100%", position: "relative" }}>
         <div className={headerStyles.borderSlide} />
       </div>
-      <OutsideAlerter onClick={() => setOpenMenuMobile(false)}>
+      {/* <OutsideAlerter onClick={() => setOpenMenuMobile(false)}>
         <MenuMobile nightMode={nightMode} open={openMenuMobile} close={() => setOpenMenuMobile(false)} />
-      </OutsideAlerter>
+      </OutsideAlerter> */}
     </>
   );
 };
