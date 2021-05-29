@@ -37,7 +37,7 @@ const MenuMobile = ({ open, nightMode, close }: MenuMobileProps) => {
       </div>  
       <ul className={styles.menu}>
         <li className={styles.menuItem}>
-          <Link to="/">
+          <Link to="/" onClick={close}>
             <DoorIcon
               color={nightMode ? "#61dafb" : "#2763a8"}
               className={styles.shadow}
@@ -46,7 +46,7 @@ const MenuMobile = ({ open, nightMode, close }: MenuMobileProps) => {
           </Link>
         </li>
         <li className={`${styles.menuItem} grow`}>
-          <Link to="/html/">
+          <Link to="/html/" onClick={close}>
             <DoorIcon
               color={nightMode ? "#61dafb" : "#2763a8"}
               className={styles.shadow}

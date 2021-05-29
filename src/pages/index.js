@@ -84,11 +84,11 @@ function IndexPage({ data }) {
             <span role="img" aria-label="Joystick">
               🎮
             </span>{" "}
-            Gamer for fun{" "}
+            Gamer for fun
             <span role="img" aria-label="Book">
               📚
             </span>{" "}
-            I have to admit I use to read a lot more than I do nowdays{" "}
+            I have to admit I use to read a lot more than I do nowdays
             <span role="img" aria-label="Ball">
               ⚽
             </span>{" "}
@@ -110,7 +110,9 @@ function IndexPage({ data }) {
           data-scroll-easing="ease"
           className={`${styles.whatsThisImg}`}
         >
-          <GatsbyImage image={image} alt="whats-this-pic" />
+          <a href="https://www.imdb.com/title/tt0107688/" target="_new">
+            <GatsbyImage image={image} alt="whats-this-pic" className="grow" />
+          </a>
         </div>
       </div>
       <div></div>
@@ -123,12 +125,13 @@ function IndexPage({ data }) {
               💼
             </span>{" "}
             This is mainly an attempt to build a personal portfolio. I have been
-            working in the industry a few more than {(new Date()).getFullYear() - 2016} years now. I worked in the
-            BE with PHP using laravel and using plain PHP, then I shifted to the
-            FE because React and ES6, but everytime I search for a new job I
-            face the same issue, I don't have any code to show because it
-            belongs to the companies, now I decided to change that, a bit late
-            but never too late.
+            working in the industry a few more than{" "}
+            {new Date().getFullYear() - 2016} years now. I worked in the BE with
+            PHP using laravel and using plain PHP, then I shifted to the FE
+            because React and ES6, but everytime I search for a new job I face
+            the same issue, I don't have any code to show because it belongs to
+            the companies, now I decided to change that, a bit late but never
+            too late.
           </li>
           <li>
             <span role="img" aria-label="Notebook">
@@ -145,12 +148,13 @@ function IndexPage({ data }) {
             <span role="img" aria-label="">
               🧰
             </span>{" "}
-            Since I have been a frontend developer the last {(new Date()).getFullYear() - 2018} years and I really
-            enjoy that role, most of the content will be orientated to that
-            environment, this doesn't mean in the future I can't post
-            something about other technologies I may find interesting. But for
-            now CSS, JS, HTML and especially ReactJS content will be the
-            majority (if not all) of the content.
+            Since I have been a frontend developer the last{" "}
+            {new Date().getFullYear() - 2018} years and I really enjoy that
+            role, most of the content will be orientated to that environment,
+            this doesn't mean in the future I can't post something about other
+            technologies I may find interesting. But for now CSS, JS, HTML and
+            especially ReactJS content will be the majority (if not all) of the
+            content.
           </li>
         </ul>
       </div>
