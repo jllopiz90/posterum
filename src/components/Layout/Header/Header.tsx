@@ -38,8 +38,17 @@ const toogleColors = (currentMode: boolean) => {
   );
 };
 
-const Header = ({ setMode, openMenu, openMenuMobile, nightMode }: { openMenuMobile: boolean, nightMode: boolean, openMenu:  () => void, setMode: React.Dispatch<React.SetStateAction<boolean>>}) => {
-  
+const Header = ({
+  setMode,
+  openMenu,
+  openMenuMobile,
+  nightMode,
+}: {
+  openMenuMobile: boolean;
+  nightMode: boolean;
+  openMenu: () => void;
+  setMode: React.Dispatch<React.SetStateAction<boolean>>;
+}) => {
   useEffect(() => {
     document.documentElement.style.setProperty(
       "--hide-opacity",
@@ -48,36 +57,33 @@ const Header = ({ setMode, openMenu, openMenuMobile, nightMode }: { openMenuMobi
   }, [openMenuMobile]);
 
   return (
-    <div>
-      <header>
-        <span>
-          <a href="https://github.com/jllopiz90" target="_new">
-            <OctocatImage />
-          </a>
-        </span>
-        <div className={headerStyles.buttonsContainer}>
-          <button
-            onClick={() => {
-              toogleColors(nightMode);
-              setMode(!nightMode);
-            }}
-            className="button grow"
-          >
-            {nightMode ? <SunIcon /> : <MoonIcon />}
-          </button>
-          <button
-            onClick={openMenu}
-            className="button grow show-on-mobile"
-          >
-            <KeyIcon size={16} color={nightMode ? "#eff31d" : "#d8a12a"} />
-            <KeyholeIcon size={12} color={nightMode ? "#61dafb" : "#2763a8"} />
-          </button>
-        </div>
-      </header>
+    <header>
+      <div className={headerStyles.innerHeader}>
+      <span>
+        <a href="https://github.com/jllopiz90" target="_new">
+          <OctocatImage />
+        </a>
+      </span>
+      <div className={headerStyles.buttonsContainer}>
+        <button
+          onClick={() => {
+            toogleColors(nightMode);
+            setMode(!nightMode);
+          }}
+          className="button grow"
+        >
+          {nightMode ? <SunIcon /> : <MoonIcon />}
+        </button>
+        <button onClick={openMenu} className="button grow show-on-mobile">
+          <KeyIcon size={16} color={nightMode ? "#eff31d" : "#d8a12a"} />
+          <KeyholeIcon size={12} color={nightMode ? "#61dafb" : "#2763a8"} />
+        </button>
+      </div>
+      </div>
       <div className={headerStyles.borderSliderWrapper}>
         <div className={headerStyles.borderSlide} />
       </div>
-    </div>
+    </header>
   );
 };
 

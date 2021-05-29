@@ -3,12 +3,18 @@ header {
   background-color: var(--main-bg-color);
   height: 60px;
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
   font-size: calc(10px + 2vmin);
   color: white;
   padding: 5px 20px;
+}
+
+.innerHeader {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
 
 @keyframes Slide-border {
@@ -36,6 +42,7 @@ header {
 .borderSliderWrapper {
    width: "100%"; 
    position: "relative";
+   margin-top: 10px;
  }
 
 .borderSlide {
