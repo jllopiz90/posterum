@@ -19,13 +19,13 @@ const MenuMobile = ({ open, nightMode, close }: MenuMobileProps) => {
   }, []);
 
   return (
-    <dialog
-      open={open}
+    <div
       className={styles.drawer}
       data-scroll={`slide-larger-${open ? 'left' : 'right'}`}
       data-scroll-duration="1000"
       dat-scroll-delay="400"
       data-scroll-easing="ease"
+      style={{ display: open ? 'block' : 'none' }}
     >
       <div className={styles.closeBtnContainer}>
         <button
@@ -55,7 +55,7 @@ const MenuMobile = ({ open, nightMode, close }: MenuMobileProps) => {
           </Link>
         </li>
       </ul>
-    </dialog>
+    </div>
   );
 };
 

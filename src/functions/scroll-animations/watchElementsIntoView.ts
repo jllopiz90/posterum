@@ -168,10 +168,8 @@ export const useIntersectionObserver = () => {
       rootMargin: options.rootMargin,
       threshold: options.threshold,
     });
-    console.log("before call getObserverElements");
 
     setElements(getObservedElements());
-    console.log("after call getObserverElements");
   };
 
   /**

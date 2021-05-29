@@ -1,8 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { StaticImage } from "gatsby-plugin-image";
 
-import MenuMobile from "../../elements/RigthDrawer";
-import OutsideAlerter from "../../../functions/useOutsideElementEvent";
 import { SunIcon, MoonIcon, KeyholeIcon, KeyIcon } from "../../icons";
 import * as headerStyles from "./header.module.css";
 
@@ -40,10 +38,8 @@ const toogleColors = (currentMode: boolean) => {
   );
 };
 
-const Header = () => {
-  const [nightMode, setMode] = useState(true);
-  const [openMenuMobile, setOpenMenuMobile] = useState(false);
-
+const Header = ({ setMode, openMenu, openMenuMobile, nightMode }: { openMenuMobile: boolean, nightMode: boolean, openMenu:  () => void, setMode: React.Dispatch<React.SetStateAction<boolean>>}) => {
+  
   useEffect(() => {
     document.documentElement.style.setProperty(
       "--hide-opacity",
@@ -52,7 +48,7 @@ const Header = () => {
   }, [openMenuMobile]);
 
   return (
-    <>
+    <div>
       <header>
         <span>
           <a href="https://github.com/jllopiz90" target="_new">
@@ -70,9 +66,7 @@ const Header = () => {
             {nightMode ? <SunIcon /> : <MoonIcon />}
           </button>
           <button
-            onClick={() => {
-              setOpenMenuMobile(true);
-            }}
+            onClick={openMenu}
             className="button grow show-on-mobile"
           >
             <KeyIcon size={16} color={nightMode ? "#eff31d" : "#d8a12a"} />
@@ -80,13 +74,10 @@ const Header = () => {
           </button>
         </div>
       </header>
-      <div id="line-moving" style={{ width: "100%", position: "relative" }}>
+      <div className={headerStyles.borderSliderWrapper}>
         <div className={headerStyles.borderSlide} />
       </div>
-      {/* <OutsideAlerter onClick={() => setOpenMenuMobile(false)}>
-        <MenuMobile nightMode={nightMode} open={openMenuMobile} close={() => setOpenMenuMobile(false)} />
-      </OutsideAlerter> */}
-    </>
+    </div>
   );
 };
 

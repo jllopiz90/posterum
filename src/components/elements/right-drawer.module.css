@@ -1,5 +1,5 @@
 .menu {
-  padding-left: 10px;
+  padding-left: 20px;
 }
 
 .menuItem {
@@ -17,7 +17,7 @@ li a {
 
 .drawer {
   position: fixed;
-  right: -80px;
+  right: 0;
   top: 10px;
   width: 20rem;
   min-height: 100%;
@@ -40,5 +40,7 @@ li a {
 }
 
 .closeBtn {
+    margin-top: 5px;
+    border: none;
     background: transparent;
 }

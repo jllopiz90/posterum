@@ -33,6 +33,11 @@ header {
   }
 }
 
+.borderSliderWrapper {
+   width: "100%"; 
+   position: "relative";
+ }
+
 .borderSlide {
   position: absolute;
   width: 100%;
@@ -45,6 +50,9 @@ header {
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  header {
+    width: 89vw;
+  }
   .buttonsContainer {
     display: flex;
     flex-direction: row;
