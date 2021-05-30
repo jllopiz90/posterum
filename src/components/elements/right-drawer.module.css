@@ -16,11 +16,12 @@ li a {
 }
 
 .drawer {
+  z-index: 11;
   position: fixed;
   right: 0;
   top: 10px;
   width: 20rem;
-  min-height: 100%;
+  min-height: 98vh;
   background-color: var(--main-bg-color);
   border: 1px solid var(--main-text-color);
   -webkit-filter: drop-shadow(0.5px 0.5px 0.5px var(--main-text-color));

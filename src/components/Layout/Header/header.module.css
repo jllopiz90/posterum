@@ -3,12 +3,12 @@ header {
   z-index: 10;
   width: 96vw;
   background-color: var(--main-bg-color);
-  height: 60px;
+  height: 50px;
   display: flex;
   flex-direction: column;
   font-size: calc(10px + 2vmin);
   color: white;
-  padding: 5px 20px;
+  padding: 5px 20px 0 20px;
 }
 
 .innerHeader {
