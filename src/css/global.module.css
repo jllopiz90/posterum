@@ -55,6 +55,10 @@ p, li {
   display: none;  
 }
 
+:global(.hide-on-mobile) {
+  display: block;  
+}
+
 :global(.circle ul li::before) {
   content: "\2022"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
   color: var(--sky-color); /* Change the color */
@@ -67,6 +71,10 @@ p, li {
 @media only screen and (min-device-width: 320px) and (max-device-width: 560px) {
   :global(.show-on-mobile) {
     display: block;
+  }
+
+  :global(.hide-on-mobile) {
+    display: none;  
   }
 
   main {

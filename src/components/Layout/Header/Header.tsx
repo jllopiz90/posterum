@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import  { Link } from 'gatsby';
 import { StaticImage } from "gatsby-plugin-image";
 
 import { SunIcon, MoonIcon, KeyholeIcon, KeyIcon } from "../../icons";
@@ -64,6 +65,14 @@ const Header = ({
           <OctocatImage />
         </a>
       </span>
+      <div className={`${headerStyles.linksContainer} hide-on-mobile`}>
+        <Link to="/" >
+          <span> Posterum</span>
+        </Link>
+        <Link to="/html" >
+          HTML tags
+        </Link>
+      </div>
       <div className={headerStyles.buttonsContainer}>
         <button
           onClick={() => {

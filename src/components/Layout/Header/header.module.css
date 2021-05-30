@@ -58,6 +58,18 @@ header {
   height: 1px;
 }
 
+.linksContainer {
+  flex-grow: 1;
+  padding: 10px 60px 0;
+}
+
+.linksContainer a {
+  margin-left: 40px;
+  font-size: 19px;  
+  text-decoration: none;
+  color: var(--main-text-color)
+}
+
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   header {
     width: 89vw;
