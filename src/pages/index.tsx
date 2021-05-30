@@ -88,7 +88,7 @@ function IndexPage({ data }) {
             <span role="img" aria-label="Book">
               📚
             </span>{" "}
-            I have to admit I use to read a lot more than I do nowdays
+            I have to admit I use to read a lot more than I do nowadays
             <span role="img" aria-label="Ball">
               ⚽
             </span>{" "}
@@ -151,7 +151,7 @@ function IndexPage({ data }) {
             Since I have been a frontend developer the last{" "}
             {new Date().getFullYear() - 2018} years and I really enjoy that
             role, most of the content will be orientated to that environment,
-            this doesn't mean in the future I can't post something about other
+            this doesn't mean in the future I wont't post something about other
             technologies I may find interesting. But for now CSS, JS, HTML and
             especially ReactJS content will be the majority (if not all) of the
             content.
