@@ -67,7 +67,7 @@ const Header = ({
       </span>
       <div className={`${headerStyles.linksContainer} hide-on-mobile`}>
         <Link to="/" >
-          <span> Posterum</span>
+          <span className={headerStyles.posterum}> Posterum</span>
         </Link>
         <Link to="/html" >
           HTML tags

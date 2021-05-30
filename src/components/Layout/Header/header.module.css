@@ -1,7 +1,7 @@
 header {
   position: fixed;
   z-index: 10;
-  width: 96vw;
+  width: 97.5vw;
   background-color: var(--main-bg-color);
   height: 50px;
   display: flex;
@@ -41,6 +41,15 @@ header {
   }
 }
 
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 .borderSliderWrapper {
    width: "100%"; 
    position: "relative";
@@ -60,19 +69,34 @@ header {
 
 .linksContainer {
   flex-grow: 1;
-  padding: 10px 60px 0;
+  padding: 10px 50px 0;
 }
 
 .linksContainer a {
-  margin-left: 40px;
+  margin-left: 30px;
   font-size: 19px;  
   text-decoration: none;
   color: var(--main-text-color)
 }
 
+.posterum {
+  font-size: 25px;
+  font-weight: bold;
+  background: linear-gradient(150deg, var(--main-bg-color),rgba(22, 116, 240, 0.467) 25%, rgba(22, 215, 240, 0.467));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.posterum:hover {
+  display: inline-block;
+  transform: scale(1.2);
+  animation: spin .1s 3;
+}
+
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   header {
-    width: 89vw;
+    width: 89.5vw;
   }
   .buttonsContainer {
     display: flex;
