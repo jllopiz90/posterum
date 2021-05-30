@@ -17,6 +17,10 @@ body {
   background-color: var(--main-bg-color);
 }
 
+main {
+  padding-top: 60px;
+}
+
 h1 {
   color: var(--sky-color);
 }
@@ -63,5 +67,9 @@ p, li {
 @media only screen and (min-device-width: 320px) and (max-device-width: 560px) {
   :global(.show-on-mobile) {
     display: block;
+  }
+
+  main {
+    padding-top: 30px;
   }
 }

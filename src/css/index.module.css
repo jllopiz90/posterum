@@ -38,10 +38,6 @@ ul {
   padding-right: 100px;
 }
 
-.whatsThis {
-  z-index: 10;
-}
-
 .whatsThisImg {
   display: flex;
   justify-content: flex-end;
