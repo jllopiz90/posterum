@@ -8,11 +8,11 @@ header {
   flex-direction: column;
   font-size: calc(10px + 2vmin);
   color: white;
-  padding: 5px 20px 0 20px;
+  padding: 5px 30px 0 20px;
 }
 
 .innerHeader {
-  width: 100%;
+  width: 98%;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -38,15 +38,6 @@ header {
   100% {
     left: 100%;
     width: 0%;
-  }
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
   }
 }
 
@@ -76,22 +67,23 @@ header {
   margin-left: 30px;
   font-size: 19px;  
   text-decoration: none;
-  color: var(--main-text-color)
+  color: var(--main-text-color);
 }
 
 .posterum {
   font-size: 25px;
   font-weight: bold;
-  background: linear-gradient(150deg, var(--main-bg-color),rgba(22, 116, 240, 0.467) 25%, rgba(22, 215, 240, 0.467));
+  background: linear-gradient(150deg, var(--main-bg-color),var(--sky-color) 25%, var(--main-text-color));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  transition: all 0.8s ease-in-out;
+  transform: perspective(50em);
 }
 
 .posterum:hover {
   display: inline-block;
   transform: scale(1.2);
-  animation: spin .1s 3;
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {

@@ -67,7 +67,7 @@ const Header = ({
       </span>
       <div className={`${headerStyles.linksContainer} hide-on-mobile`}>
         <Link to="/" >
-          <span className={headerStyles.posterum}> Posterum</span>
+          <span className={`${headerStyles.posterum} textShadow3D`}> Posterum</span>
         </Link>
         <Link to="/html" >
           HTML tags
@@ -79,7 +79,7 @@ const Header = ({
             toogleColors(nightMode);
             setMode(!nightMode);
           }}
-          className="button grow"
+          className="button boxShadow3D"
         >
           {nightMode ? <SunIcon /> : <MoonIcon />}
         </button>

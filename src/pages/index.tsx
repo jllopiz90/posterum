@@ -30,12 +30,12 @@ function IndexPage({ data }) {
     <div className="three-columns-grid">
       <div></div>
       <div className={`${styles.twoColumns} ${styles.fullRowMobile}`}>
-        <h1 className={styles.title}>Jesus Llopiz portfolio</h1>
+        <h2 className={styles.title}>Jesus Llopiz portfolio</h2>
       </div>
       <div
         className={`${styles.codingImg} ${styles.fullRowMobile} ${styles.hideOnMenu}`}
       >
-        <a href="https://github.com/jllopiz90" target="_new">
+        <a href="https://twitter.com/jllopiz90" target="_new">
           <CodingImg />
         </a>
       </div>
@@ -101,7 +101,7 @@ function IndexPage({ data }) {
         className={`${styles.fullRowMobile} ${styles.twoColumns} ${styles.whatsThisImgContainer}`}
       >
         <div className={styles.whatsThis}>
-          <h1 className={styles.title}>What's this?</h1>
+          <h2 className={styles.title}>What's this?</h2>
         </div>
         <div
           data-scroll="slide-up"
@@ -117,7 +117,11 @@ function IndexPage({ data }) {
       </div>
       <div></div>
       <div
-        className={`${styles.fullRowMobile} ${styles.twoColumns} ${styles.description} circle`}
+        data-scroll="fade-in"
+        data-scroll-duration="1000"
+        dat-scroll-delay="400"
+        data-scroll-easing="ease"
+        className={`${styles.fullRowMobile} ${styles.twoColumns} ${styles.description} ${styles.description2} circle`}
       >
         <ul>
           <li>
@@ -141,8 +145,8 @@ function IndexPage({ data }) {
             I follow recommend to write your own blogs for a lot of reasons,
             mainly to fix the knowledge and have a place where you can find help
             quickly. That's why I want this to be also a site with helpful blogs
-            and examples to help myself and others to build their web
-            applications easier and faster.
+            and examples to help myself and others to build web applications
+            easier and faster.
           </li>
           <li>
             <span role="img" aria-label="">
@@ -153,8 +157,7 @@ function IndexPage({ data }) {
             role, most of the content will be orientated to that environment,
             this doesn't mean in the future I wont't post something about other
             technologies I may find interesting. But for now CSS, JS, HTML and
-            especially ReactJS content will be the majority (if not all) of the
-            content.
+            especially ReactJS will be the majority (if not all) of the content.
           </li>
         </ul>
       </div>

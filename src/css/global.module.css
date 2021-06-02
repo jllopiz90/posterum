@@ -21,11 +21,12 @@ main {
   padding-top: 60px;
 }
 
-h1 {
+h1,h2 {
   color: var(--sky-color);
 }
 
-p, li {
+p,
+li {
   color: var(--main-text-color);
 }
 
@@ -37,9 +38,31 @@ p, li {
   background-color: transparent;
 }
 
+:global(.textShadow3D:hover) {
+  transition: all 1s ease-in-out;
+}
+
+:global(.textShadow3D:hover) {
+  text-shadow: 0px 0px var(--sky-color), 1px 1px var(--main-bg-color), 2px 2px var(--main-text-color);
+  -webkit-transform: translateX(-2px);
+  transform: translateX(-2px);
+}
+
+:global(.boxShadow3D) {
+  transition: all 1s ease-in-out;
+}
+
+:global(.boxShadow3D:hover) {
+  box-shadow: 1px 1px var(--sky-color), 2px 2px var(--main-text-color);
+  -webkit-transform: translateX(-3px);
+  transform: translateX(-3px);
+  /* transition: all 1s ease-in-out; */
+}
+
 :global(.grow) {
   transition: all 0.2s ease-in-out;
 }
+
 :global(.grow:hover) {
   transform: scale(1.1);
   filter: brightness(var(--button-bright));
@@ -52,11 +75,11 @@ p, li {
 }
 
 :global(.show-on-mobile) {
-  display: none;  
+  display: none;
 }
 
 :global(.hide-on-mobile) {
-  display: block;  
+  display: block;
 }
 
 :global(.circle ul li::before) {
@@ -74,7 +97,7 @@ p, li {
   }
 
   :global(.hide-on-mobile) {
-    display: none;  
+    display: none;
   }
 
   main {
