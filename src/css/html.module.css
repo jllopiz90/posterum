@@ -1,0 +1,115 @@
+.citeWithBackground {
+  background-color: rgba(55, 245, 204, 0.589);
+  padding: 0 5px;
+  margin-left: 5px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  justify-content: space-around;
+}
+
+.description {
+  margin: auto 100px 20px 100px;
+}
+
+.description p {
+  font-size: 13px;
+}
+
+.tagDesc {
+  background-color: #87dcebb3;
+  padding: 10px;
+  border-radius: 20px;
+  width: 60vw;
+  margin-bottom: 40px;
+}
+
+address {
+  text-align: center;
+  color: var(--main-text-color);
+}
+
+del {
+  background-color: rgb(212 58 58 / 57%);
+  padding: 0 1px;
+}
+
+ins {
+  background-color: rgba(104, 206, 91, 0.39);
+  padding: 0 1px;
+}
+
+hgroup {
+  text-align: right;
+  font-family: Verdana, sans-serif;
+  padding-right: 16px;
+  border-right: 10px solid #00c8d7;
+}
+
+.note {
+  display: none;
+}
+
+progress[value] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 250px;
+  height: 20px;
+  border-radius: 20px;
+}
+
+progress[value]::-webkit-progress-bar {
+  /* border-radius: 2px; */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+  border-radius: 20px;
+}
+
+progress[value]::-webkit-progress-value {
+  background-image: -webkit-linear-gradient(
+      -45deg,
+      transparent 33%,
+      rgba(0, 0, 0, 0.1) 33%,
+      rgba(0, 0, 0, 0.1) 66%,
+      transparent 66%
+    ),
+    -webkit-linear-gradient(top, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.25)),
+    -webkit-linear-gradient(left, #09c, #f44);
+
+  border-radius: 2px;
+  background-size: 35px 20px, 100% 100%, 100% 100%;
+  border-radius: 20px;
+  -webkit-animation: animate-stripes 1s linear infinite;
+  animation: animate-stripes 1s linear infinite;
+}
+
+progress[value]::-moz-progress-bar {
+  background-image: -webkit-linear-gradient(
+      -45deg,
+      transparent 33%,
+      rgba(0, 0, 0, 0.1) 33%,
+      rgba(0, 0, 0, 0.1) 66%,
+      transparent 66%
+    ),
+    -webkit-linear-gradient(top, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.25)),
+    -webkit-linear-gradient(left, #09c, #f44);
+
+  border-radius: 2px;
+  background-size: 35px 20px, 100% 100%, 100% 100%;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  -webkit-animation: animate-stripes 5s linear infinite;
+  animation: animate-stripes 5s linear infinite;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .description {
+    margin: auto 50px 20px 50px;
+  }
+  .note {
+    display: block;
+  }
+}
