@@ -17,7 +17,7 @@ export const useIntersectionObserver = () => {
   const [options, setOptions] = useState<any>({
     root: null,
     rootMargin: "0% 50%",
-    threshold: 0.5,
+    threshold: 0.3,
     animateClassName: styles.scrollAnimate,//"scroll-animate",
     disabledClassName: styles.scrollDisabled,//"scroll-disabled",
     enterEventName: "scroll:in",

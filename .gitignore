@@ -4,3 +4,6 @@ public
 
 # CSS  modules types
 **/*.css.d.ts
+
+# system
+.DS_Store
