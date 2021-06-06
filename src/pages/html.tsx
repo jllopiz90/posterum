@@ -166,7 +166,7 @@ function HTMLPage() {
       >
         <p>&lt;ins&gt; and &lt;del&gt; tags</p>
         <p>
-          If you're wanting to display editing revisions with with markup,
+          If you're wanting to display editing revisions with markup,
           &lt;ins&gt; and &lt;del&gt; are just the ticket. Like the name
           implies, ins highlights what's been added to the document with an
           underline, and del shows what's been taken out with a strikethrough.
