@@ -7,18 +7,22 @@ const toogleColors = (mode: ThemeMode) => {
     "--main-bg-color",
     mode === 'light' ? "#fff" : "#000"
   );
+
   document.documentElement.style.setProperty(
     "--main-text-color",
     mode === 'light' ? "#000" : "#fff"
   );
+
   document.documentElement.style.setProperty(
     "--button-bright",
     mode === 'light' ? "80%" : "120%"
   );
+
   document.documentElement.style.setProperty(
     "--sky-color",
     mode === 'light' ? "#276779" : "#61dafb"
   );
+  
   document.documentElement.style.setProperty(
     "--shadow-color",
     mode === 'light' ? "#61dafb" : "#fff"
