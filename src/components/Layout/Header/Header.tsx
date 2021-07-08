@@ -4,6 +4,7 @@ import { StaticImage } from "gatsby-plugin-image";
 
 import { SunIcon, MoonIcon, KeyholeIcon, KeyIcon } from "../../icons";
 import * as headerStyles from "./header.module.css";
+import { ThemeMode } from "../../../functions/useDarkMode";
 
 const OctocatImage = () => (
   <StaticImage
@@ -16,29 +17,6 @@ const OctocatImage = () => (
   />
 );
 
-const toogleColors = (currentMode: boolean) => {
-  document.documentElement.style.setProperty(
-    "--main-bg-color",
-    currentMode ? "#fff" : "#000"
-  );
-  document.documentElement.style.setProperty(
-    "--main-text-color",
-    currentMode ? "#000" : "#fff"
-  );
-  document.documentElement.style.setProperty(
-    "--button-bright",
-    currentMode ? "80%" : "120%"
-  );
-  document.documentElement.style.setProperty(
-    "--sky-color",
-    currentMode ? "#276779" : "#61dafb"
-  );
-  document.documentElement.style.setProperty(
-    "--shadow-color",
-    currentMode ? "#61dafb" : "#fff"
-  );
-};
-
 const Header = ({
   setMode,
   openMenu,
@@ -48,7 +26,7 @@ const Header = ({
   openMenuMobile: boolean;
   nightMode: boolean;
   openMenu: () => void;
-  setMode: React.Dispatch<React.SetStateAction<boolean>>;
+  setMode:  React.Dispatch<React.SetStateAction<ThemeMode>>;
 }) => {
   useEffect(() => {
     document.documentElement.style.setProperty(
@@ -76,8 +54,7 @@ const Header = ({
       <div className={headerStyles.buttonsContainer}>
         <button
           onClick={() => {
-            toogleColors(nightMode);
-            setMode(!nightMode);
+            setMode(nightMode ? 'light' : 'dark');
           }}
           className="button boxShadow3D"
         >
