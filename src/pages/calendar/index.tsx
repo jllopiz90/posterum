@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
-import type { WeekSelection } from "./helper";
-import { generateCalendar } from "./helper";
+import React, { useState } from "react";
+import type { WeekSelection } from "../../functions/calendarHelpers/helper";
+import { generateCalendar } from "../../functions/calendarHelpers/helper";
 import "../../css/global.module.css";
 
 const usersFromLocalStorage = localStorage.getItem("calendar-users");
