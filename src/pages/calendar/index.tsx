@@ -3,8 +3,11 @@ import type { WeekSelection } from "../../functions/calendarHelpers/helper";
 import { generateCalendar } from "../../functions/calendarHelpers/helper";
 import "../../css/global.module.css";
 
-const usersFromLocalStorage =
-  window !== undefined && window.localStorage.getItem("calendar-users");
+const usersFromLocalStorage = () => {
+  if (window !== undefined) {
+    window.localStorage.getItem("calendar-users");
+  }
+};
 
 function IndexPage() {
   const [users, setUsers] = useState<string[]>(() =>
