@@ -4,15 +4,13 @@ import { generateCalendar } from "../../functions/calendarHelpers/helper";
 import "../../css/global.module.css";
 
 const usersFromLocalStorage = () => {
-  if (window !== undefined) {
-    return window.localStorage.getItem("calendar-users") || "";
-  }
-  return "";
+  const isBrowser = () => typeof window !== "undefined";
+  return isBrowser() ? window.localStorage.getItem("calendar-users") : "";
 };
 
 function IndexPage() {
   const [users, setUsers] = useState<string[]>(() =>
-    usersFromLocalStorage ? JSON.parse(usersFromLocalStorage()) : []
+    !!usersFromLocalStorage ? JSON.parse(usersFromLocalStorage() as string) : []
   );
   const [userInput, setuserInput] = useState("");
   const [allowRemoveUsers, setAllowRemoveUsers] = useState(false);
