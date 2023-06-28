@@ -36,7 +36,9 @@ function generateWeek(users: string[], previousWeek?: WeekSelection) {
           const timesSelectedPreviousWeek = !!previousWeek
             ? picksCountOnWeek(user, previousWeek)
             : 0;
-          const maximumPicksThisWeek = timesSelectedPreviousWeek > 2 ? 2 : 3;
+          const tripleSelectedCount = countTripleSelectedInWeek(weekPicks);
+          const maximumPicksThisWeek =
+            timesSelectedPreviousWeek > 2 || tripleSelectedCount > 3 ? 2 : 3;
           return (
             !selection.includes(user) &&
             timesSelectedThisWeek < maximumPicksThisWeek
@@ -76,6 +78,24 @@ function picksCountOnWeek(user: string, weekPicks: WeekSelection) {
     return selectedInCurrentDay ? picksCount + 1 : picksCount;
   }, 0);
   return totalPicks;
+}
+
+function countTripleSelectedInWeek(week: WeekSelection) {
+  const usersCount = {};
+  Object.keys(week).forEach((day) => {
+    week[day as WeekDay].forEach((user) => {
+      if (Object.keys(usersCount).includes(user)) {
+        usersCount[user] = usersCount[user] + 1;
+      } else {
+        usersCount[user] = 1;
+      }
+    });
+  });
+  let count = 0;
+  Object.keys(usersCount).forEach((user) => {
+    if (usersCount[user] > 2) count++;
+  });
+  return count;
 }
 
 export function generateCalendar(users: string[]) {
