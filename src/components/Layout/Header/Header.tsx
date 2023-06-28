@@ -35,7 +35,9 @@ const Header = ({
     );
   }, [openMenuMobile]);
 
-  const isCalendarPage = window.location.pathname === "/calendar";
+  const isCalendarPage =
+    window.location.pathname === "/calendar" ||
+    window.location.pathname === "/calendar/";
 
   return (
     <header>
