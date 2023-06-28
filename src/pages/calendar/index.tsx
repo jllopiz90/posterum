@@ -5,13 +5,14 @@ import "../../css/global.module.css";
 
 const usersFromLocalStorage = () => {
   if (window !== undefined) {
-    window.localStorage.getItem("calendar-users");
+    return window.localStorage.getItem("calendar-users") || "";
   }
+  return "";
 };
 
 function IndexPage() {
   const [users, setUsers] = useState<string[]>(() =>
-    usersFromLocalStorage ? JSON.parse(usersFromLocalStorage) : []
+    usersFromLocalStorage ? JSON.parse(usersFromLocalStorage()) : []
   );
   const [userInput, setuserInput] = useState("");
   const [allowRemoveUsers, setAllowRemoveUsers] = useState(false);
