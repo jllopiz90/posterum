@@ -4,7 +4,7 @@ import { generateCalendar } from "../../functions/calendarHelpers/helper";
 import "../../css/global.module.css";
 
 const usersFromLocalStorage =
-  window?.localStorage !== undefined && localStorage.getItem("calendar-users");
+  window !== undefined && window.localStorage.getItem("calendar-users");
 
 function IndexPage() {
   const [users, setUsers] = useState<string[]>(() =>
