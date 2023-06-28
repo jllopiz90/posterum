@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import  { Link } from 'gatsby';
+import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 
 import { SunIcon, MoonIcon, KeyholeIcon, KeyIcon } from "../../icons";
@@ -26,7 +26,7 @@ const Header = ({
   openMenuMobile: boolean;
   nightMode: boolean;
   openMenu: () => void;
-  setMode:  React.Dispatch<React.SetStateAction<ThemeMode>>;
+  setMode: React.Dispatch<React.SetStateAction<ThemeMode>>;
 }) => {
   useEffect(() => {
     document.documentElement.style.setProperty(
@@ -35,40 +35,49 @@ const Header = ({
     );
   }, [openMenuMobile]);
 
+  const isCalendarPage = window.location.pathname === "/calendar";
+
   return (
     <header>
       <div className={headerStyles.innerHeader}>
-      <span>
-        <a href="https://github.com/jllopiz90" target="_new">
-          <OctocatImage />
-        </a>
-      </span>
-      <div className={`${headerStyles.linksContainer} hide-on-mobile`}>
-        <Link to="/" >
-          <span className={`${headerStyles.posterum} textShadow3D`}> Posterum</span>
-        </Link>
-        <Link to="/html" >
-          HTML tags
-        </Link>
+        {!isCalendarPage && (
+          <>
+            <span>
+              <a href="https://github.com/jllopiz90" target="_new">
+                <OctocatImage />
+              </a>
+            </span>
+            <div className={`${headerStyles.linksContainer} hide-on-mobile`}>
+              <Link to="/">
+                <span className={`${headerStyles.posterum} textShadow3D`}>
+                  {" "}
+                  Posterum
+                </span>
+              </Link>
+              <Link to="/html">HTML tags</Link>
+            </div>
+          </>
+        )}
+        <div className={headerStyles.buttonsContainer}>
+          <button
+            onClick={() => {
+              setMode(nightMode ? "light" : "dark");
+            }}
+            className="button boxShadow3D"
+          >
+            {nightMode ? <SunIcon /> : <MoonIcon />}
+          </button>
+          <button onClick={openMenu} className="button grow show-on-mobile">
+            <KeyIcon size={16} color={nightMode ? "#eff31d" : "#d8a12a"} />
+            <KeyholeIcon size={12} color={nightMode ? "#61dafb" : "#2763a8"} />
+          </button>
+        </div>
       </div>
-      <div className={headerStyles.buttonsContainer}>
-        <button
-          onClick={() => {
-            setMode(nightMode ? 'light' : 'dark');
-          }}
-          className="button boxShadow3D"
-        >
-          {nightMode ? <SunIcon /> : <MoonIcon />}
-        </button>
-        <button onClick={openMenu} className="button grow show-on-mobile">
-          <KeyIcon size={16} color={nightMode ? "#eff31d" : "#d8a12a"} />
-          <KeyholeIcon size={12} color={nightMode ? "#61dafb" : "#2763a8"} />
-        </button>
-      </div>
-      </div>
-      <div className={headerStyles.borderSliderWrapper}>
-        <div className={headerStyles.borderSlide} />
-      </div>
+      {!isCalendarPage && (
+        <div className={headerStyles.borderSliderWrapper}>
+          <div className={headerStyles.borderSlide} />
+        </div>
+      )}
     </header>
   );
 };

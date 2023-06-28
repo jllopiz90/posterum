@@ -21,13 +21,23 @@ main {
   padding-top: 60px;
 }
 
-h1,h2 {
+h1,
+h2 {
   color: var(--sky-color);
 }
 
 p,
-li {
+li,
+label,
+th,
+td {
   color: var(--main-text-color);
+}
+
+th,
+td {
+  border: 1px solid var(--main-text-color);
+  padding: 8px;
 }
 
 :global(.button) {
@@ -43,7 +53,8 @@ li {
 }
 
 :global(.textShadow3D:hover) {
-  text-shadow: 0px 0px var(--sky-color), 1px 1px var(--main-bg-color), 2px 2px var(--main-text-color);
+  text-shadow: 0px 0px var(--sky-color), 1px 1px var(--main-bg-color),
+    2px 2px var(--main-text-color);
   -webkit-transform: translateX(-2px);
   transform: translateX(-2px);
 }
