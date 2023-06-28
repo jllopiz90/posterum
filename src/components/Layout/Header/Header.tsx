@@ -69,10 +69,15 @@ const Header = ({
           >
             {nightMode ? <SunIcon /> : <MoonIcon />}
           </button>
-          <button onClick={openMenu} className="button grow show-on-mobile">
-            <KeyIcon size={16} color={nightMode ? "#eff31d" : "#d8a12a"} />
-            <KeyholeIcon size={12} color={nightMode ? "#61dafb" : "#2763a8"} />
-          </button>
+          {!isCalendarPage && (
+            <button onClick={openMenu} className="button grow show-on-mobile">
+              <KeyIcon size={16} color={nightMode ? "#eff31d" : "#d8a12a"} />
+              <KeyholeIcon
+                size={12}
+                color={nightMode ? "#61dafb" : "#2763a8"}
+              />
+            </button>
+          )}
         </div>
       </div>
       {!isCalendarPage && (

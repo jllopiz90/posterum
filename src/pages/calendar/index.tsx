@@ -42,15 +42,19 @@ function IndexPage() {
   };
 
   const onGenerateCalendar = () => {
-    console.log("calling generate calendar");
     const calendarAux = generateCalendar(users);
-    console.log("calendar generated", calendarAux);
     setCalendar(calendarAux);
   };
 
   return (
-    <div style={{ padding: "10px 20px" }}>
-      <div style={{ display: "flex", justifyContent: "space-between" }}>
+    <div style={{ padding: "50px 20px" }}>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          maxWidth: 400,
+        }}
+      >
         <label>Insert User:</label>
         <input
           type="text"
