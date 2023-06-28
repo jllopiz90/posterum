@@ -10,7 +10,9 @@ const usersFromLocalStorage = () => {
 
 function IndexPage() {
   const [users, setUsers] = useState<string[]>(() =>
-    !!usersFromLocalStorage ? JSON.parse(usersFromLocalStorage() as string) : []
+    !!usersFromLocalStorage()
+      ? JSON.parse(usersFromLocalStorage() as string)
+      : []
   );
   const [userInput, setuserInput] = useState("");
   const [allowRemoveUsers, setAllowRemoveUsers] = useState(false);
